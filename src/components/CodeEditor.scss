@@ -1,38 +1,14 @@
-:root {
-  --color_dove_gray_approx: #666;
-  --alabaster: #fafafa;
-  --black: #000;
-  --white: #fff;
-  --color_cerise_red_approx: #e42b66;
-  --color_cinnabar_approx: #e2433f;
-  --color-comments: #90a4ae;
-  --color-punctuation: white;
-  --color-type: #e91e63;
-  --color-strings: #EE8146;
-  --color_roman_coffee_approx: #795548;
-  --color_governor_bay_approx: #367D8B;
-  --color-function-name: #92BD48;
-  --color-variable: #ff9800;
-
-  --color-editor: #374050;
-	--color-background: #374050;
-	--gradient-editor: linear-gradient(90deg, rgba(55,64,80,0.9) 0%, rgba(55,64,80,1) 100%);
-  //fonts
-  --font_0: "Fira code";
-  --font_1: "Fira Mono";
-  --font_2: "Consolas";
-  --font_3: "Menlo";
-  --font_4: "Courier";
-	--font_5: "monospace";
-	counter-reset: line;
-}
 
 .CodeEditor {
 	line-height: 1.5;
 	font-size: 15px;
 	background: linear-gradient(rgba(55,64,80,0.9) 0%, rgba(55,64,80,1) 100%);
 	margin-left: 30px;
+	margin-right: -30px;
+	margin-top: 20px;
 	outline: none;
+	height: calc(100% - 40px);
+	width: calc(100% - 40px);
 	&:active {
 		border: none;
 	}
@@ -40,13 +16,13 @@
 
 
 .container {
-	font-family: var(--font_0), var(--font_1), var(--font_2), var(--font_3), var(--font_4), var(--font_5);
+	font-family: var(--font-0), var(--font-1), var(--font-2), var(--font-3), var(--font-4), var(--font-5);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
 	width: 100%;
-	color: var(--color_dove_gray_approx);
+	color: var(--color-primary);
 	background-color: var(--gradient-editor);
 	padding-left: 100px!important;
 	&_editor_line_number {

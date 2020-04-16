@@ -1,5 +1,5 @@
 import React from 'react'
-import Editor from 'react-simple-code-editor'
+import SimpleEditor from 'react-simple-code-editor'
 import { highlight, languages } from 'prismjs/components/prism-core'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
@@ -16,7 +16,7 @@ import './CodeEditor.scss'
 
 const CodeEditor = ({ code, setCode }) => {
   return (
-    <Editor
+    <SimpleEditor
       className="CodeEditor"
       value={code}
       onValueChange={(localCode) => setCode(localCode)}
@@ -29,7 +29,6 @@ const CodeEditor = ({ code, setCode }) => {
       padding={10}
       style={{
         fontFamily: '"Fira code", "Fira Mono", monospace',
-        height: '100%',
       }}
     />
   )

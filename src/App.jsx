@@ -11,6 +11,8 @@ import Froggy from './pages/Froggy'
 import Level from './pages/Level'
 import FilterInstructions from './pages/FilterInstructions'
 
+import './App.scss'
+
 const Header = styled.header``
 const Nav = styled.nav``
 const List = styled.ul`

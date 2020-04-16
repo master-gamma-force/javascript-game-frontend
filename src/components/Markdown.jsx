@@ -3,9 +3,8 @@ import ReactMarkdown from 'react-markdown'
 import './Markdown.scss'
 import Prism from 'prismjs'
 // import './CodeEditor.scss'
-import './Instructions.scss'
 
-const Instructions = ({ text }) => {
+const Markdown = ({ text }) => {
   useEffect(() => {
     Prism.highlightAll()
   }, [text])
@@ -16,4 +15,4 @@ const Instructions = ({ text }) => {
   )
 }
 
-export default Instructions
+export default Markdown

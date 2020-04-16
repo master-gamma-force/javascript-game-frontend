@@ -34,13 +34,13 @@ const Home = () => {
   return (
     <Wrapper>
       <Sidebar>
-        <Instructions></Instructions>
-        <CodeEditor></CodeEditor>
+        <Instructions />
+        {/* <CodeEditor /> */}
       </Sidebar>
       <Results>
         Acá se muestra si hay un error o no
       </Results>
-      <Helper></Helper>
+      <Helper />
 
     </Wrapper>
   )
