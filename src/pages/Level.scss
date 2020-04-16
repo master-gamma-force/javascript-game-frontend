@@ -1,0 +1,53 @@
+// .Level {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 2fr 1fr;
+//   grid-area: 'instructions editor'
+//               'tests       editor';
+//   width: 100vw;
+//   height: 100vh;
+// }
+// .Level-Instructions {
+//   background: red;
+//   grid-area: 'instructions';
+// }
+// .Level-Editor {
+//   background: blue;
+//   grid-area: 'editor';
+// }
+// .Level-Tests {
+//   background: green;
+//   grid-area: 'tests';
+// }
+
+
+
+.Level {
+  display: grid;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "instructions editor"
+                        "tests  editor";
+}
+
+.Level-Instructions {
+  grid-area: instructions;
+  background-color: #8ca0ff;
+}
+
+.Level-Editor {
+  grid-area: editor;
+  background-color:#3A404B;
+}
+
+.Level-Tests {
+  grid-area: tests;
+  background-color: #ffff64;
+}
+
+.Level-Footer {
+  grid-area: foot;
+  background-color: #8cffa0;
+}

@@ -28,6 +28,8 @@ const Results = styled.div`
   padding:50px;
 `
 
+const Helper = styled.div``
+
 const Home = () => {
   return (
     <Wrapper>
@@ -37,8 +39,8 @@ const Home = () => {
       </Sidebar>
       <Results>
         Acá se muestra si hay un error o no
-
       </Results>
+      <Helper></Helper>
 
     </Wrapper>
   )

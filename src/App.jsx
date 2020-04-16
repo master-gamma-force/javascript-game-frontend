@@ -7,7 +7,8 @@ import {
   Link
 } from 'react-router-dom'
 
-import Home from './pages/Home'
+import Froggy from './pages/Froggy'
+import Level from './pages/Level'
 
 const Header = styled.header``
 const Nav = styled.nav``
@@ -26,39 +27,28 @@ export default function App () {
         <Nav>
           <List>
             <NavElement>
-              <Link to="/">Home</Link>
+              <Link to="/froggy">Froggy</Link>
             </NavElement>
             <NavElement>
-              <Link to="/about">About</Link>
+              <Link to="/">Levels</Link>
             </NavElement>
-            <NavElement>
-              <Link to="/users">Users</Link>
-            </NavElement>
+
           </List>
         </Nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+
+          <Route path="/froggy">
+            <Froggy />
           </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
+
           <Route path="/">
-            <Home />
+            <Level />
           </Route>
         </Switch>
       </Header>
     </Router>
   )
-}
-
-function About () {
-  return <h2>About</h2>
-}
-
-function Users () {
-  return <h2>Users</h2>
 }
