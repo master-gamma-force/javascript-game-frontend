@@ -1,22 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const Wrapper = styled.div`
-  background-color:#43A047;
-  color:white;
-  padding:20px;
-  min-height:200px;
-  max-height:100%;
-  margin:auto;
-  display:grid;
-  align-content:center;
-`
+import React, { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import myMarkdownFile from '../mocks/hello.md'
+import Prism from 'prismjs'
+// import './CodeEditor.scss'
+import './Instructions.scss'
 
 const Instructions = () => {
+  const [text, setText] = useState('')
+  useEffect(() => {
+    fetch(myMarkdownFile)
+      .then(response => response.text())
+      .then(t => {
+        // Logs a string of Markdown content.
+        // Now you could use e.g. <rexxars/react-markdown> to render it.
+        console.log(t)
+        setText(t)
+        Prism.highlightAll()
+      })
+  }, [])
   return (
-    <Wrapper>
-      <p>Bienvenido a Flexbox Froggy, un juego donde ayudarás a Froggy y a sus amigos escribiendo código CSS. Guía a esta rana hacia la hoja de lirio en la derecha, usando la propiedad justify-content, la cual alinea elementos horizontalmente y acepta los siguientes valores:</p>
-    </Wrapper>
+    <div className="MarkdownText">
+      <ReactMarkdown source={text} />
+    </div>
   )
 }
 
