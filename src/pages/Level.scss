@@ -1,27 +1,3 @@
-// .Level {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 2fr 1fr;
-//   grid-area: 'instructions editor'
-//               'tests       editor';
-//   width: 100vw;
-//   height: 100vh;
-// }
-// .Level-Instructions {
-//   background: red;
-//   grid-area: 'instructions';
-// }
-// .Level-Editor {
-//   background: blue;
-//   grid-area: 'editor';
-// }
-// .Level-Tests {
-//   background: green;
-//   grid-area: 'tests';
-// }
-
-
-
 .Level {
   display: grid;
   width: 100vw;
@@ -43,14 +19,55 @@
 .Level-Editor {
   grid-area: editor;
   background-color:#3A404B;
+
+
 }
+
 
 .Level-Tests {
   grid-area: tests;
-  background-color: #ffff64;
+  background-color: var(--color-primary-dark);
 }
 
-.Level-Footer {
-  grid-area: foot;
-  background-color: #8cffa0;
+
+
+.Editor {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  height: 100%;
+  &-header {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-weight: bold;
+    background: var(--color-primary-darker);
+    width: 150px;
+  }
+  &-footer {
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-darker);
+    display: flex;
+    // flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &-button {
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    background-color: transparent;
+    font-size: 15px;
+    font-family: var(--font-family-text);
+    min-width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      border: none;
+      color: var(--white);
+      background-color: var(--color-secondary);
+    }
+  }
 }
