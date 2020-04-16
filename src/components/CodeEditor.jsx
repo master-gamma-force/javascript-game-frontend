@@ -7,41 +7,32 @@ import 'prismjs/components/prism-markup'
 
 import './CodeEditor.scss'
 
-const code = `function add(a, b) {
-  return a + b;
-}
-`
+// const code = `
+// function helloWorld() {
+//   console.log('Hello World')
+// }
+// helloWorld()
+// `
 
-class CodeEditor extends React.Component {
-  constructor () {
-    super()
-    this.state = { code }
-  }
-
-  render () {
-    return (
-      <Editor
-        className="CodeEditor"
-        value={this.state.code}
-        onValueChange={code => this.setState({ code })}
-        // highlight={code => highlight(code, languages.javascript)}
-        highlight={code =>
-          highlight(code, languages.javascript)
-            .split('\n')
-            .map(
-              line =>
-                `<span class="container_editor_line_number">${line}</span>`
-            )
-            .join('\n')
-        }
-        padding={10}
-        style={{
-          fontFamily: '"Fira code", "Fira Mono", monospace',
-          height: '100%'
-        }}
-      />
-    )
-  }
+const CodeEditor = ({ code, setCode }) => {
+  return (
+    <Editor
+      className="CodeEditor"
+      value={code}
+      onValueChange={(localCode) => setCode(localCode)}
+      highlight={(localCode) => highlight(localCode, languages.javascript)
+        .split('\n')
+        .map(
+          (line) => `<span class="container_editor_line_number">${line}</span>`,
+        )
+        .join('\n')}
+      padding={10}
+      style={{
+        fontFamily: '"Fira code", "Fira Mono", monospace',
+        height: '100%',
+      }}
+    />
+  )
 }
 
 export default CodeEditor

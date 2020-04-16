@@ -4,11 +4,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
 } from 'react-router-dom'
 
 import Froggy from './pages/Froggy'
 import Level from './pages/Level'
+import FilterInstructions from './pages/FilterInstructions'
 
 const Header = styled.header``
 const Nav = styled.nav``
@@ -20,7 +21,7 @@ const NavElement = styled.li`
   list-style-type:none;
 `
 
-export default function App () {
+export default function App() {
   return (
     <Router>
       <Header>
@@ -28,6 +29,9 @@ export default function App () {
           <List>
             <NavElement>
               <Link to="/froggy">Froggy</Link>
+            </NavElement>
+            <NavElement>
+              <Link to="/filter">Filter</Link>
             </NavElement>
             <NavElement>
               <Link to="/">Levels</Link>
@@ -42,6 +46,9 @@ export default function App () {
 
           <Route path="/froggy">
             <Froggy />
+          </Route>
+          <Route path="/filter">
+            <FilterInstructions />
           </Route>
 
           <Route path="/">

@@ -1,8 +1,10 @@
 .Markdown {
   font-family: 'Lato', sans-serif;
   color: #475161;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
+  max-width: 900px;
+  margin: auto;
   & pre.language-javascript {
     line-height: 1.5;
     font-size: 15px;
@@ -32,5 +34,8 @@
     &.punctuation {
       color: var(--color-primary)
     }
+  }
+  & img {
+    display: inline;
   }
 }
