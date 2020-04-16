@@ -1,0 +1,36 @@
+.Markdown {
+  font-family: 'Lato', sans-serif;
+  color: #475161;
+  font-size: 14px;
+  font-weight: normal;
+  & pre.language-javascript {
+    line-height: 1.5;
+    font-size: 15px;
+    margin-left: 0;
+    outline: none;
+    background-color: #F0F0F0;
+    color:var(--color-primary-darker);
+    padding: 20px;
+  }
+  h1, h2, h3, h4 {
+
+  }
+  h1 {
+    font-size: 47px;
+    text-align: center;
+  }
+  h2 {
+
+  }
+  hr {
+    height: 30px;
+    background: url("../assets/images/dot.svg") repeat-x 0 0;
+    border: 0;
+    width: 100%;
+  }
+  & .token {
+    &.punctuation {
+      color: var(--color-primary)
+    }
+  }
+}
