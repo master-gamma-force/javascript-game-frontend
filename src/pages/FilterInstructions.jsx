@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Markdown from './Markdown'
-import myMarkdownFile from '../mocks/hello.md'
-// import './CodeEditor.scss'
-import './Instructions.scss'
+import Markdown from '../components/Markdown'
+import myMarkdownFile from '../mocks/filter.md'
 
-const Instructions = () => {
+const MarkdownPage = () => {
   const [text, setText] = useState('')
   useEffect(() => {
     fetch(myMarkdownFile)
@@ -18,4 +16,4 @@ const Instructions = () => {
   )
 }
 
-export default Instructions
+export default MarkdownPage

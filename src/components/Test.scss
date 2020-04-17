@@ -1,0 +1,17 @@
+.Test {
+  padding: 20px;
+  &.to-do {
+    // background: var(--color-yellow);
+    color: var(--color-yellow);
+  }
+  &.valid {
+    color: var(--color-green);
+  }
+  &.invalid {
+    color: var(--color-secondary);
+  }
+  &-container {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+}

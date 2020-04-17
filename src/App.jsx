@@ -4,10 +4,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
 } from 'react-router-dom'
 
-import Home from './pages/Home'
+import Froggy from './pages/Froggy'
+import Level from './pages/Level'
+import FilterInstructions from './pages/FilterInstructions'
+
+import './App.scss'
 
 const Header = styled.header``
 const Nav = styled.nav``
@@ -19,46 +23,41 @@ const NavElement = styled.li`
   list-style-type:none;
 `
 
-export default function App () {
+export default function App() {
   return (
     <Router>
       <Header>
         <Nav>
           <List>
             <NavElement>
-              <Link to="/">Home</Link>
+              <Link to="/froggy">Froggy</Link>
             </NavElement>
             <NavElement>
-              <Link to="/about">About</Link>
+              <Link to="/filter">Filter</Link>
             </NavElement>
             <NavElement>
-              <Link to="/users">Users</Link>
+              <Link to="/">Levels</Link>
             </NavElement>
+
           </List>
         </Nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+
+          <Route path="/froggy">
+            <Froggy />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/filter">
+            <FilterInstructions />
           </Route>
+
           <Route path="/">
-            <Home />
+            <Level />
           </Route>
         </Switch>
       </Header>
     </Router>
   )
-}
-
-function About () {
-  return <h2>About</h2>
-}
-
-function Users () {
-  return <h2>Users</h2>
 }

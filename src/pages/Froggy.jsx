@@ -28,17 +28,19 @@ const Results = styled.div`
   padding:50px;
 `
 
+const Helper = styled.div``
+
 const Home = () => {
   return (
     <Wrapper>
       <Sidebar>
-        <Instructions></Instructions>
-        <CodeEditor></CodeEditor>
+        <Instructions />
+        {/* <CodeEditor /> */}
       </Sidebar>
       <Results>
         Acá se muestra si hay un error o no
-
       </Results>
+      <Helper />
 
     </Wrapper>
   )
