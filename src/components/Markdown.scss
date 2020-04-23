@@ -1,4 +1,14 @@
 .Markdown {
+
+  aside {
+    width: 33%;
+    float: left;
+  }
+  article {
+    width: 66%;
+    float: left;
+  }
+
   font-family: var(--font-family-text);
   color: #475161;
   font-size: 16px;

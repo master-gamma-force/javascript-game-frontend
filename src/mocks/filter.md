@@ -1,23 +1,38 @@
 # Filter
 
-Soy Oscar tengo una startup y tengo algunos problemas que quiero que me ayudes a solucionar. 
+<article>
 
-Voy a crear un sistema de analisis de datos y necesito alguien de mi equipo que sepa Python, quiero encontrarlo sin necesidad de preguntarle a cada uno. Tengo guardadas sus habilidades en un archivo, creo que tu podrías ayudarme con tus conocimientos de JavaScript.
+Soy Oscar tengo una startup y tengo algunos problemas que quiero que me ayudes a solucionar.
+
+Voy a crear un sistema de analisis de datos y necesito alguien de mi equipo que
+sepa Python, quiero encontrarlo sin necesidad de preguntarle a cada uno. Tengo
+guardadas sus habilidades en un archivo, creo que tu podrías ayudarme con tus
+conocimientos de JavaScript.
+
+</article>
+
+<aside>
+
+![](https://firebasestorage.googleapis.com/v0/b/personal-challenge-01.appspot.com/o/gamma%2FOscar.svg?alt=media&token=dee38849-2095-4be2-9d2b-4a8c9e3a3fe5)
+</aside>
 
 ***
 
 ## Lección
 
+<aside>
 
+![](https://firebasestorage.googleapis.com/v0/b/personal-challenge-01.appspot.com/o/gamma%2FPepe.svg?alt=media&token=5544c1ca-e965-4098-809f-a671af84bf88)
+</aside>
 
-![](https://firebasestorage.googleapis.com/v0/b/personal-challenge-01.appspot.com/o/gamma%2FOscar.svg?alt=media&token=974345e3-82d6-4643-8b5f-a1634a20b028)
-
-
+<article>
 
 Hola soy Pepe y te apoyare enseñandote  Filter para que puedas ayudar a Oscar.
 
 Te voy a explicar, filter funciona como un filtro, filter es un método que todo array tiene, recibe una función que es la parte lógica del filtro, lo que dice si pasa o no pasa, y ese filtro se aplica a los elementos del array, te devuelve un nuevo array con los elemetos del array que cumplieron con la condición dada en la función.
 Ejemplo:
+
+
 
 ```javascript
 let alimentos = [🍎,🥑,🍉,🍰,🍕,🍟];
@@ -28,6 +43,8 @@ console.log(comidaSana);
 
 [🍎,🥑,🍉]
 ```
+</article>
+
 
 ## Ejemplo de Uso
 
