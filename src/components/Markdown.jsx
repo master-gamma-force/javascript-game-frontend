@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown/with-html'
 import './Markdown.scss'
 import Prism from 'prismjs'
 // import './CodeEditor.scss'
@@ -10,7 +10,10 @@ const Markdown = ({ text }) => {
   }, [text])
   return (
     <div className="Markdown">
-      <ReactMarkdown source={text} />
+      <ReactMarkdown
+        source={text}
+        escapeHtml={false}
+      />
     </div>
   )
 }
