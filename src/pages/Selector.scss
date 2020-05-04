@@ -1,0 +1,16 @@
+.Selector {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Selector-Title {
+  font-size: 2em;
+  margin-top: 3em;
+  margin-bottom: 0.67em;
+  color: var(--color-primary);
+  font-family: var(--font-family-text);
+  text-align: center;
+}
+

@@ -1,0 +1,16 @@
+.LevelList-Title {
+    color: var(--color-primary);
+    font-family: var(--font-family-text);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+.LevelList-Body {
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+}
+

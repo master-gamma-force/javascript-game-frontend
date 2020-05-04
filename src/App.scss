@@ -4,15 +4,15 @@
 
   --color-primary: #475161;
   --color-primary-dark: #374050;
-  --color-primary-darker: #24262B;
+  --color-primary-darker: #24262b;
 
-  --color-secondary: #FF614C;
+  --color-secondary: #ff614c;
 
-  --color-green: #BFDC36;
-  --color-green-lighter: #A5FE85;
+  --color-green: #bfdc36;
+  --color-green-lighter: #a5fe85;
 
-  --color-yellow: #F1CA2F;
-  --color-beige: #EBE8D8;
+  --color-yellow: #f1ca2f;
+  --color-beige: #ebe8d8;
 
   --color_dove_gray_approx: #666;
   --alabaster: #fafafa;
@@ -24,17 +24,17 @@
   --color-type: var(--color-beige);
   --color-strings: var(--color-secondary);
   --color_roman_coffee_approx: #795548;
-  --color_governor_bay_approx: #367D8B;
+  --color_governor_bay_approx: #367d8b;
   --color-function-name: var(--color-green);
   --color-variable: var(--color-yellow);
 
-
-
   --color-editor: var(--color-primary-dark);
-	--color-background: var(--color-primary-darker);
-  --gradient-editor: linear-gradient(90deg,
-                                          rgba(55,64,80,0.9) 0%,
-                                          rgba(55,64,80,1) 100%);
+  --color-background: var(--color-primary-darker);
+  --gradient-editor: linear-gradient(
+    90deg,
+    rgba(55, 64, 80, 0.9) 0%,
+    rgba(55, 64, 80, 1) 100%
+  );
   //fonts
   --font-0: "Fira code";
   --font-1: "Fira Mono";
@@ -42,11 +42,27 @@
   --font-3: "Menlo";
   --font-4: "Courier";
   --font-5: "monospace";
-  --font-6: 'Lato';
+  --font-6: "Lato";
   --font-7: "Helvetica";
   --font-8: "Arial";
   --font-9: "sans-serif";
   --font-family-code: var(--font-0, --font-1, --font-5);
   --font-family-text: var(--font-6, --font-7, --font-8, --font-9);
-	counter-reset: line;
+  counter-reset: line;
 }
+
+
+
+.header {
+  background: url("assets/images/header.svg") no-repeat left center;
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
+.container-data{
+  padding: 20px;
+}
+
