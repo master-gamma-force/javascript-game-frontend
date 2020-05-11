@@ -1,72 +1,33 @@
 import React, { useState, useEffect } from 'react'
+
+// core imports
+import Test from '../components/Test'
+import { testCode } from '../services/workerConnection'
+import instructionsFile from '../mocks/filterInstructions.md'
+
+// Components
 import './Level.scss'
 import CodeEditor from '../components/CodeEditor'
 import Markdown from '../components/Markdown'
 
-import instructionsFile from '../mocks/filterInstructions.md'
-import editorFile from '../mocks/codigoFilter.mock'
-import Test from '../components/Test'
+// import editorFile from '../mocks/codigoFilter.mock'
 
-export const TEMPLATE = `let leonidas = {
-  name: "Leondias",
-  skill:  "JavaScript"
+import { TEMPLATE,
+  TEST,
+} from '../core/templates/filter'
+
+const handleRunTests = (event, { code, callback, test }) => {
+  testCode({ code, callback, test })
 }
-let nicole = {
-  name: "Nicole",
-  skill: "Python"
-}
-let richard = {
-  name: "Richard",
-  skill: "Python"
-}
-let angela = {
-  name: "Angela",
-  skill: "JavaScript"
-}
-
-const employees = [];
-
-const  knowPython = () => {
-
-}
-
-const sabePython = employees.method(function);
-
-console.log(sabePython);`
-
-export const TEST = [
-  {
-    description: 'Test content employees know Python',
-    type: 'deepEqual',
-    value: 'sabePython',
-    params: [
-      [
-        { name: 'Nicole', skill: 'Python' },
-        { name: 'Richard', skill: 'Python' },
-      ],
-    ],
-  },
-  {
-    description: 'Test length of employees know Python',
-    type: 'equal',
-    value: 'sabePython.length',
-    params: [2],
-  },
-]
 
 const Level = () => {
   const [instructions, setInstructions] = useState('')
-  const [code, setCode] = useState('')
+  const [code, setCode] = useState(TEMPLATE)
   useEffect(() => {
     fetch(instructionsFile)
       .then((response) => response.text())
       .then((t) => {
         setInstructions(t)
-      })
-    fetch(editorFile)
-      .then((response) => response.text())
-      .then((t) => {
-        setCode(t)
       })
   }, [])
   console.log(code)
@@ -88,7 +49,20 @@ const Level = () => {
           </div>
           <CodeEditor code={code} setCode={setCode} />
           <div className="Editor-footer">
-            <button className="Editor-button">Correr Pruebas</button>
+            <button
+              type="button"
+              className="Editor-button"
+              onClick={(e) => {
+                handleRunTests(e, { code,
+                  callback: (e) => {
+                    console.log(e.data.logs)
+                    console.log(e.data.errors)
+                  },
+                  tests: TEST })
+              }}
+            >
+              Correr Pruebas
+            </button>
           </div>
         </div>
       </div>
