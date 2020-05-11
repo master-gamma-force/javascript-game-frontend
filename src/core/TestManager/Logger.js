@@ -1,10 +1,9 @@
 import AbstractLogger from './AbstractLogger'
 
-
 export default class Logger {
   constructor() {
-    this.log = new AbstractLogger();
-    this.logErr = new AbstractLogger();
+    this.log = new AbstractLogger()
+    this.logErr = new AbstractLogger()
   }
 
   /**
@@ -12,7 +11,7 @@ export default class Logger {
    * @param {Object} log Log info
    */
   newLog(log) {
-    this.log.add(log);
+    this.log.add(log)
   }
 
   /**
@@ -20,7 +19,7 @@ export default class Logger {
    * @param {Object} err err info
    */
   newErr(err) {
-    this.logErr.add(err);
+    this.logErr.add(err)
   }
 
   /**
@@ -28,7 +27,7 @@ export default class Logger {
    * @returns {Object[]} list of errors
    */
   get errors() {
-    return this.logErr.getAll();
+    return this.logErr.getAll()
   }
 
   /**
@@ -36,14 +35,14 @@ export default class Logger {
    * @returns {Object[]} list of errors
    */
   get logs() {
-    return this.log.getAll();
+    return this.log.getAll()
   }
 
   /**
    * Clean the logger
    */
   clear() {
-    this.log.clean();
-    this.logErr.clean();
+    this.log.clean()
+    this.logErr.clean()
   }
 }

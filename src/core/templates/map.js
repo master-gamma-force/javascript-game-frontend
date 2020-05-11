@@ -1,5 +1,5 @@
 export const TEMPLATE = `let leonidas = {
-  name: "Leondias",
+  name: "Leonidas",
   timeOfWork: 48
 }
 let nicole = {
@@ -23,7 +23,7 @@ const  monthsToYears = () => {
 
 const timeInYears = employees.method(function);
 
-console.log(timeInYears);`;
+console.log(timeInYears);`
 
 export const TEST = [
   {
@@ -34,4 +34,4 @@ export const TEST = [
       [4, 3, 2, 1],
     ],
   },
-];
+]

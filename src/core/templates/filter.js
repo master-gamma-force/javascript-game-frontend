@@ -23,8 +23,7 @@ const  knowPython = () => {
 
 const sabePython = employees.method(function);
 
-console.log(sabePython);`;
-
+console.log(sabePython);`
 
 export const TEST = [
   {
@@ -44,4 +43,4 @@ export const TEST = [
     value: 'sabePython.length',
     params: [2],
   },
-];
+]

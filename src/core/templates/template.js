@@ -1,5 +1,5 @@
 export const TEMPLATE = `
-`;
+`
 
 export const TEST = [
   {
@@ -8,4 +8,4 @@ export const TEST = [
     value: '',
     params: [],
   },
-];
+]

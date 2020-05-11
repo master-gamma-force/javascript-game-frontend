@@ -22,6 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:worker": "webpack --config ./src/core/core.webpack.config.js --mode production",
     "test": "jest",
     "eject": "react-scripts eject"
   },
@@ -54,7 +55,8 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-standard": "^4.0.1",
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "webpack-cli": "^3.3.11"
   },
   "jest": {
     "verbose": true

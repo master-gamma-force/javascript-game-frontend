@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from 'chai'
 
 export default class GameTest {
   /**
@@ -10,10 +10,10 @@ export default class GameTest {
   constructor({
     description, type, value, params,
   }) {
-    this.description = description;
-    this.value = value;
+    this.description = description
+    this.value = value
     this.test = (values) => {
-      assert[type](values, ...params);
-    };
+      assert[type](values, ...params)
+    }
   }
 }

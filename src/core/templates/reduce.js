@@ -23,7 +23,7 @@ const sum = ( previous , current ) => {
 
 const total = employees.method(function , initialValue);
 
-console.log(total);`;
+console.log(total);`
 
 export const TEST = [
   {
@@ -32,4 +32,4 @@ export const TEST = [
     value: 'total',
     params: [13400],
   },
-];
+]

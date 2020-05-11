@@ -1,5 +1,5 @@
-import GameTest from './GameTest';
-import Logger from './Logger';
+import GameTest from './GameTest'
+import Logger from './Logger'
 
 export default class TestManager {
   /**
@@ -12,28 +12,28 @@ export default class TestManager {
    */
   constructor(dataTest) {
     if (!dataTest.length) {
-      this.tests = null;
+      this.tests = null
     } else {
-      const isNull = !dataTest.reduce((acu, cur) => (acu
-        && cur.description
-        && cur.type
-        && cur.value
-        && cur.params
-      ), true);
+      const isNull = !dataTest.reduce((acu, cur) => (acu &&
+        cur.description &&
+        cur.type &&
+        cur.value &&
+        cur.params
+      ), true)
 
       if (isNull) {
-        this.tests = null;
-        throw new Error("Test doesn't have the structure of GameTest class");
+        this.tests = null
+        throw new Error("Test doesn't have the structure of GameTest class")
       } else {
         try {
-          this.tests = dataTest.map((test) => new GameTest(test));
+          this.tests = dataTest.map((test) => new GameTest(test))
         } catch (err) {
-          throw new Error(`Can't load test: ${err}`);
+          throw new Error(`Can't load test: ${err}`)
         }
       }
     }
 
-    this.log = new Logger();
+    this.log = new Logger()
   }
 
   /**
@@ -41,26 +41,26 @@ export default class TestManager {
    */
   run() {
     if (!this.tests) {
-      throw new Error('There are no test');
+      throw new Error('There are no test')
     }
 
-    this.log.clear();
+    this.log.clear()
 
     this.tests.forEach((test) => {
       try {
-        test.test(test.value);
+        test.test(test.value)
 
         this.log.newLog({
           test: test.description,
           pass: true,
-        });
+        })
       } catch (err) {
         this.log.newErr({
           test: test.description,
           pass: false,
           err,
-        });
+        })
       }
-    });
+    })
   }
 }
