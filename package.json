@@ -20,8 +20,8 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "build:worker": "webpack --config ./src/core/core.webpack.config.js --mode production",
     "test": "jest",
     "eject": "react-scripts eject"
@@ -54,7 +54,9 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-standard": "^4.0.1",
-    "webpack-cli": "^3.3.11"
+    "react-app-rewired": "^2.1.6",
+    "webpack-cli": "^3.3.11",
+    "worker-loader": "^2.0.0"
   },
   "jest": {
     "verbose": true

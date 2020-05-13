@@ -10,14 +10,23 @@ import './Level.scss'
 import CodeEditor from '../components/CodeEditor'
 import Markdown from '../components/Markdown'
 
+import MyWorker from '../core/workers/test.worker'
+
 // import editorFile from '../mocks/codigoFilter.mock'
 
 import { TEMPLATE,
   TEST,
 } from '../core/templates/filter'
 
-const handleRunTests = (event, { code, callback, test }) => {
-  testCode({ code, callback, test })
+const handleRunTests = (event, { code, callback, tests }) => {
+  testCode({ code, callback, tests })
+}
+
+const handleRunWorker = (e) => {
+  const worker = new MyWorker()
+  worker.postMessage(1)
+  worker.addEventListener('message', (event) => console.log({ counter: event.data }))
+
 }
 
 const Level = () => {
@@ -52,14 +61,15 @@ const Level = () => {
             <button
               type="button"
               className="Editor-button"
-              onClick={(e) => {
-                handleRunTests(e, { code,
-                  callback: (e) => {
-                    console.log(e.data.logs)
-                    console.log(e.data.errors)
-                  },
-                  tests: TEST })
-              }}
+              // onClick={(e) => {
+              //   handleRunTests(e, { code,
+              //     callback: (e) => {
+              //       console.log(e.data.logs)
+              //       console.log(e.data.errors)
+              //     },
+              //     tests: TEST })
+              // }}
+              onClick={handleRunWorker}
             >
               Correr Pruebas
             </button>
