@@ -19,14 +19,14 @@ import { TEMPLATE,
 } from '../core/templates/filter'
 
 const handleRunTests = (e, { code, tests }) => {
-  const worker = new MyWorker()
+  const worker = new CoreWorker()
   const data = { code, tests, counter: 1 }
   worker.postMessage(data)
   console.log(data)
 
   worker.addEventListener('message', (event) => {
     console.log(event)
-    // worker.terminate()
+    worker.terminate()
   }, false)
 }
 

@@ -4,7 +4,7 @@
 import TestManager from '../TestManager/TestManager'
 
 self.addEventListener('message', (e) => {
-  const tm = new TestManager(e.data.test)
+  const tm = new TestManager(e.data.tests)
 
   let step
 
@@ -30,6 +30,8 @@ self.addEventListener('message', (e) => {
       err,
     })
   }
+
+  // let { counter, code, tests } = event.data
 
   self.postMessage({
     logs: tm.log.logs,
