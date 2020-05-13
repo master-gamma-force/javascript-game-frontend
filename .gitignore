@@ -26,3 +26,5 @@ yarn-error.log*
 
 src/core/workers/main.bundle.js
 src/core/workers/worker.bundle.js
+
+.vscode
