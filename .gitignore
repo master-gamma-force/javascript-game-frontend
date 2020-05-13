@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .now
+
+src/core/workers/main.bundle.js
+src/core/workers/worker.bundle.js
