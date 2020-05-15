@@ -19,10 +19,11 @@ console.log(comidaSana);
 [🍎,🥑,🍉]
 ```
 
-## Ejemplo de Uso
+### Ahora un ejemplo paso a paso.
 
 Te voy a enseñar como aplicarlo en una zapatería, imagina que viene un cliente y quiere ver todos los modelos en su talla, él es talla 6.
-Ordenas tus modelos en objetos:
+
+### Paso 1: Pon tus zapatos en objetos.
 
 ```js
 let zapato1 = {
@@ -43,13 +44,13 @@ let zapato4 = {
 };
 ```
 
-Declara un array que incluya a todos los zapatos:
+### Paso 2: Crea un array que incluya a todos los zapatos.
 
 ```js
 const zapatos = [zapato1, zapato2, zapato3, zapato4];
 ```
 
-Crea la función que nos diga si cumple la condición de ser talla 6:
+### Paso 3: Crea la función.
 
 ```js
 function esTalla6(articulo) {
@@ -57,7 +58,7 @@ function esTalla6(articulo) {
 }
 ```
 
-Aplicamos el método filter y lo mostramos con un console.log()
+### Paso 4: Aplica el método filter y lo muestra el resultado con un console.log()
 
 ```js
 const talla6 = zapatos.filter(esTalla6);
