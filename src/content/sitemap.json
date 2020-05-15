@@ -1,0 +1,14 @@
+{
+  "filter": {
+    "levels": ["level-one"],
+    "lections": ["lection.md"]
+  },
+  "map": {
+    "levels": ["level-one"],
+    "lections": ["lection.md"]
+  },
+  "reduce": {
+    "levels": ["level-one"],
+    "lections": ["lection.md"]
+  }
+}
