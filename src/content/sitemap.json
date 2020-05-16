@@ -23,7 +23,7 @@
         "contentPath": "src/content/arrays/map/content.md",
         "challengePath": "src/content/arrays/map/challenge.md",
         "testPath": "src/content/arrays/map/map.js",
-        "nextLevelId": null
+        "nextLevelId": 3
       },
       {
         "id": 3,
