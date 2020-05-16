@@ -5,7 +5,7 @@
     "levels": [
       {
         "id": 1,
-        "isActive": false,
+        "isActive": true,
         "isWinner": false,
         "levelNumber": 1,
         "title": "Filter",
@@ -16,8 +16,8 @@
       },
       {
         "id": 2,
-        "isActive": true,
-        "isWinner": true,
+        "isActive": false,
+        "isWinner": false,
         "levelNumber": 2,
         "title": "Map",
         "contentPath": "src/content/arrays/map/content.md",
@@ -27,8 +27,8 @@
       },
       {
         "id": 3,
-        "isActive": true,
-        "isWinner": true,
+        "isActive": false,
+        "isWinner": false,
         "levelNumber": 3,
         "title": "Reduce",
         "contentPath": "src/content/arrays/reduce/content.md",
