@@ -1,14 +1,41 @@
-{
-  "filter": {
-    "levels": ["level-one"],
-    "lections": ["lection.md"]
-  },
-  "map": {
-    "levels": ["level-one"],
-    "lections": ["lection.md"]
-  },
-  "reduce": {
-    "levels": ["level-one"],
-    "lections": ["lection.md"]
+[
+  {
+    "id": "1",
+    "name": "Array",
+    "levels": [
+      {
+        "id": 1,
+        "isActive": false,
+        "isWinner": false,
+        "levelNumber": 1,
+        "title": "Filter",
+        "contentPath": "src/content/arrays/filter/content.md",
+        "challengePath": "src/content/arrays/filter/challenge.md",
+        "testPath": "src/content/arrays/filter/test.js",
+        "nextLevelId": 2
+      },
+      {
+        "id": 2,
+        "isActive": true,
+        "isWinner": true,
+        "levelNumber": 2,
+        "title": "Map",
+        "contentPath": "src/content/arrays/map/content.md",
+        "challengePath": "src/content/arrays/map/challenge.md",
+        "testPath": "src/content/arrays/map/map.js",
+        "nextLevelId": null
+      },
+      {
+        "id": 3,
+        "isActive": true,
+        "isWinner": true,
+        "levelNumber": 3,
+        "title": "Reduce",
+        "contentPath": "src/content/arrays/reduce/content.md",
+        "challengePath": "src/content/arrays/reduce/challenge.md",
+        "testPath": "src/content/arrays/reduce/reduce.js",
+        "nextLevelId": null
+      }
+    ]
   }
-}
+]
