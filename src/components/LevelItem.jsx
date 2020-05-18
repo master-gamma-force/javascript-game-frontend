@@ -3,14 +3,18 @@ import { useHistory } from "react-router-dom";
 import "./LevelItem.scss";
 
 const LevelItem = ({
+  id_category,
   id,
   isActive,
   isWinner,
-  category,
   levelNumber,
-  md_id,
+  title,
+  contentPath,
+  challengePath,
+  testPath,
+  nextLevelId,
 }) => {
-  const history = useHistory();
+  let history = useHistory();
   const classActive =
     "LevelItem-Button " + (isActive ? "LevelItem-Button_isActive" : "");
   const classWinner =
@@ -27,15 +31,31 @@ const LevelItem = ({
       activeNextLevel();
       history.push({
         pathname: "/filter",
-        state: { md_id: md_id },
+        state: {
+          id_category,
+          id,
+          isActive,
+          isWinner,
+          levelNumber,
+          title,
+          contentPath,
+          challengePath,
+          testPath,
+          nextLevelId,
+        },
       });
     }
   };
+
   const activeteWinner = () => {
     let data = JSON.parse(localStorage.getItem("levelData"));
     for (var i = data.length - 1; i >= 0; i--) {
-      if (data[i].id === id) {
-        data[i].isWinner = true;
+      if (data[i].id == id_category) {
+        for (let j = 0; j < data[i].levels.length; j++) {
+          if (data[i].levels[j].id == id) {
+            data[i].levels[j].isWinner = true;
+          }
+        }
       }
     }
     localStorage.setItem("levelData", JSON.stringify(data));
@@ -44,9 +64,13 @@ const LevelItem = ({
   const activeNextLevel = () => {
     let data = JSON.parse(localStorage.getItem("levelData"));
     for (var i = data.length - 1; i >= 0; i--) {
-      const level = levelNumber + 1;
-      if (level === data[i].levelNumber) {
-        data[i].isActive = true;
+      if (data[i].id == id_category) {
+        for (let j = 0; j < data[i].levels.length; j++) {
+          const level = levelNumber + 1;
+          if (level === data[i].levels[j].levelNumber) {
+            data[i].levels[j].isActive = true;
+          }
+        }
       }
     }
     localStorage.setItem("levelData", JSON.stringify(data));
