@@ -1,28 +1,49 @@
 import React, { useState, useEffect } from 'react'
+
+// Components
 import './Level.scss'
 import CodeEditor from '../components/CodeEditor'
 import Markdown from '../components/Markdown'
-
-import instructionsFile from '../mocks/filterInstructions.md'
-import editorFile from '../mocks/codigoFilter.mock'
 import Test from '../components/Test'
+
+// Content
+import instructionsFile from '../mocks/filterInstructions.md'
+import {
+  TEMPLATE,
+  TEST,
+} from '../core/templates/filter'
+
+//core
+import CoreWorker from '../core/workers/worker'
+
+const handleResponseTest =  (event) => {
+  console.log('Logs:')
+  console.log(event.data.logs)
+  console.log('Errors:')
+  console.log(event.data.errors)
+}
+
+const handleRunTests = (e, { code, tests }) => {
+  const worker = new CoreWorker()
+  const data = { code, tests }
+  worker.addEventListener('message', (event) => {
+    handleResponseTest(event)
+    worker.terminate()
+  }, false)
+  worker.postMessage(data)
+}
 
 const Level = () => {
   const [instructions, setInstructions] = useState('')
-  const [code, setCode] = useState('')
+  const [code, setCode] = useState(TEMPLATE)
   useEffect(() => {
     fetch(instructionsFile)
       .then((response) => response.text())
       .then((t) => {
         setInstructions(t)
       })
-    fetch(editorFile)
-      .then((response) => response.text())
-      .then((t) => {
-        setCode(t)
-      })
   }, [])
-  console.log(code)
+
   return (
     <div className="Level">
       <div className="Level-Instructions">
@@ -41,7 +62,13 @@ const Level = () => {
           </div>
           <CodeEditor code={code} setCode={setCode} />
           <div className="Editor-footer">
-            <button className="Editor-button">Correr Pruebas</button>
+            <button
+              type="button"
+              className="Editor-button"
+              onClick={(e) => { handleRunTests(e, { code, tests: TEST }) }}
+            >
+              Correr Pruebas
+            </button>
           </div>
         </div>
       </div>
