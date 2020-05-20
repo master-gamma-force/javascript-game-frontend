@@ -1,632 +1,122 @@
 [
   {
     "id": 1,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 1
+    "isActive": true,
+    "isWinner": false,
+    "category": "Filter",
+    "levelNumber": 1,
+    "md_id": "48f30076-6f28-4b4b-990c-76fbb43a0827"
   },
   {
     "id": 2,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 2
+    "isActive": false,
+    "isWinner": false,
+    "category": "Filter",
+    "levelNumber": 2,
+    "md_id": "06b3f918-1401-4544-920e-0007f9822f8b"
   },
   {
     "id": 3,
     "isActive": false,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 3
+    "isWinner": false,
+    "category": "Filter",
+    "levelNumber": 3,
+    "md_id": "13b9954a-8ac4-490f-ad4a-1d216590716f"
   },
   {
     "id": 4,
-    "isActive": true,
-    "isWinner": true,
+    "isActive": false,
+    "isWinner": false,
     "category": "Filter",
-    "levelNumber": 4
+    "levelNumber": 4,
+    "md_id": "5b4d655b-9c57-4245-9bb8-52707a20a162"
   },
   {
     "id": 5,
     "isActive": false,
     "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 5
+    "category": "Filter",
+    "levelNumber": 5,
+    "md_id": "acc926ff-0356-48d8-84f8-99587626af10"
   },
   {
     "id": 6,
     "isActive": false,
-    "isWinner": true,
+    "isWinner": false,
     "category": "Map",
-    "levelNumber": 6
+    "levelNumber": 6,
+    "md_id": "789d58ed-a842-4cdd-ae5e-bada60f3453f"
   },
   {
     "id": 7,
     "isActive": false,
-    "isWinner": true,
+    "isWinner": false,
     "category": "Map",
-    "levelNumber": 7
+    "levelNumber": 7,
+    "md_id": "2c062900-2642-4ee5-91cc-9aa78ff80ac3"
   },
   {
     "id": 8,
     "isActive": false,
     "isWinner": false,
     "category": "Map",
-    "levelNumber": 8
+    "levelNumber": 8,
+    "md_id": "5d589de3-c922-4796-bc6e-923b4d9d5a9c"
   },
   {
     "id": 9,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 9
+    "isActive": false,
+    "isWinner": false,
+    "category": "Map",
+    "levelNumber": 9,
+    "md_id": "f1f31ef3-1280-4535-84fa-c4b783cc6968"
   },
   {
     "id": 10,
     "isActive": false,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 10
+    "isWinner": false,
+    "category": "Map",
+    "levelNumber": 10,
+    "md_id": "cc01af1d-2d1e-4c4d-a7cc-c4a70a1da0df"
   },
   {
     "id": 11,
-    "isActive": true,
+    "isActive": false,
     "isWinner": false,
-    "category": "Map",
-    "levelNumber": 11
+    "category": "Reduce",
+    "levelNumber": 11,
+    "md_id": "c5664fef-7578-4e27-8388-129304bfd51c"
   },
   {
     "id": 12,
     "isActive": false,
     "isWinner": false,
     "category": "Reduce",
-    "levelNumber": 12
+    "levelNumber": 12,
+    "md_id": "6ee41e99-ac4f-4d7f-ad1b-767ab533aab0"
   },
   {
     "id": 13,
     "isActive": false,
     "isWinner": false,
     "category": "Reduce",
-    "levelNumber": 13
+    "levelNumber": 13,
+    "md_id": "3dd82ca6-8d59-4e2e-a2ec-ce77e6b0475b"
   },
   {
     "id": 14,
     "isActive": false,
     "isWinner": false,
     "category": "Reduce",
-    "levelNumber": 14
+    "levelNumber": 14,
+    "md_id": "3401cb43-ba93-4822-b5d4-7b9dcc5790d9"
   },
   {
     "id": 15,
     "isActive": false,
     "isWinner": false,
     "category": "Reduce",
-    "levelNumber": 15
-  },
-  {
-    "id": 16,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 16
-  },
-  {
-    "id": 17,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 17
-  },
-  {
-    "id": 18,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 18
-  },
-  {
-    "id": 19,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 19
-  },
-  {
-    "id": 20,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 20
-  },
-  {
-    "id": 21,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 21
-  },
-  {
-    "id": 22,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 22
-  },
-  {
-    "id": 23,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 23
-  },
-  {
-    "id": 24,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 24
-  },
-  {
-    "id": 25,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 25
-  },
-  {
-    "id": 26,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 26
-  },
-  {
-    "id": 27,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 27
-  },
-  {
-    "id": 28,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 28
-  },
-  {
-    "id": 29,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 29
-  },
-  {
-    "id": 30,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 30
-  },
-  {
-    "id": 31,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 31
-  },
-  {
-    "id": 32,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 32
-  },
-  {
-    "id": 33,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 33
-  },
-  {
-    "id": 34,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 34
-  },
-  {
-    "id": 35,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 35
-  },
-  {
-    "id": 36,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 36
-  },
-  {
-    "id": 37,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 37
-  },
-  {
-    "id": 38,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 38
-  },
-  {
-    "id": 39,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 39
-  },
-  {
-    "id": 40,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 40
-  },
-  {
-    "id": 41,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 41
-  },
-  {
-    "id": 42,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 42
-  },
-  {
-    "id": 43,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 43
-  },
-  {
-    "id": 44,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 44
-  },
-  {
-    "id": 45,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 45
-  },
-  {
-    "id": 46,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 46
-  },
-  {
-    "id": 47,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 47
-  },
-  {
-    "id": 48,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 48
-  },
-  {
-    "id": 49,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 49
-  },
-  {
-    "id": 50,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 50
-  },
-  {
-    "id": 51,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 51
-  },
-  {
-    "id": 52,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 52
-  },
-  {
-    "id": 53,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 53
-  },
-  {
-    "id": 54,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 54
-  },
-  {
-    "id": 55,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 55
-  },
-  {
-    "id": 56,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 56
-  },
-  {
-    "id": 57,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 57
-  },
-  {
-    "id": 58,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 58
-  },
-  {
-    "id": 59,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 59
-  },
-  {
-    "id": 60,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 60
-  },
-  {
-    "id": 61,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 61
-  },
-  {
-    "id": 62,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 62
-  },
-  {
-    "id": 63,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 63
-  },
-  {
-    "id": 64,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 64
-  },
-  {
-    "id": 65,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 65
-  },
-  {
-    "id": 66,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 66
-  },
-  {
-    "id": 67,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 67
-  },
-  {
-    "id": 68,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 68
-  },
-  {
-    "id": 69,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 69
-  },
-  {
-    "id": 70,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 70
-  },
-  {
-    "id": 71,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 71
-  },
-  {
-    "id": 72,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 72
-  },
-  {
-    "id": 73,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 73
-  },
-  {
-    "id": 74,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 74
-  },
-  {
-    "id": 75,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 75
-  },
-  {
-    "id": 76,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Reduce",
-    "levelNumber": 76
-  },
-  {
-    "id": 77,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 77
-  },
-  {
-    "id": 78,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 78
-  },
-  {
-    "id": 79,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 79
-  },
-  {
-    "id": 80,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 80
-  },
-  {
-    "id": 81,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 81
-  },
-  {
-    "id": 82,
-    "isActive": false,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 82
-  },
-  {
-    "id": 83,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Filter",
-    "levelNumber": 83
-  },
-  {
-    "id": 84,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 84
-  },
-  {
-    "id": 85,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 85
-  },
-  {
-    "id": 86,
-    "isActive": false,
-    "isWinner": true,
-    "category": "Map",
-    "levelNumber": 86
-  },
-  {
-    "id": 87,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 87
-  },
-  {
-    "id": 88,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Filter",
-    "levelNumber": 88
-  },
-  {
-    "id": 89,
-    "isActive": true,
-    "isWinner": false,
-    "category": "Map",
-    "levelNumber": 89
-  },
-  {
-    "id": 90,
-    "isActive": true,
-    "isWinner": true,
-    "category": "Reduce",
-    "levelNumber": 90
+    "levelNumber": 15,
+    "md_id": "2b1d1f72-f470-441c-a780-684e4542274d"
   }
 ]
