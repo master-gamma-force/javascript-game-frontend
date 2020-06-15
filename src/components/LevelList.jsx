@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import "./LevelList.scss";
-import LevelItem from "../components/LevelItem";
-import levelData from "../content/sitemap.json";
+import React from 'react'
+import './LevelList.scss'
+import LevelItem from './LevelItem'
+import levelData from '../content/sitemap.json'
 
 const LevelList = () => {
-  let sitemap = [];
+  let sitemap = []
   const initialData = () => {
-    let data = JSON.parse(localStorage.getItem("levelData"));
+    let data = JSON.parse(localStorage.getItem('levelData'))
     if (!data) {
-      data = levelData;
-      localStorage.setItem("levelData", JSON.stringify(levelData));
+      data = levelData
+      localStorage.setItem('levelData', JSON.stringify(levelData))
     }
-    sitemap = data;
-  };
+    sitemap = data
+  }
 
-  initialData();
+  initialData()
   return (
     <>
       {sitemap.map((item) => (
@@ -22,14 +22,14 @@ const LevelList = () => {
           <h1 className="LevelList-Title">{item.name}</h1>
           <div className="LevelList-Body">
             {item.levels.map((i, index) => {
-              i.id_category = item.id;
-              return <LevelItem key={index} {...i} />;
+              i.id_category = item.id
+              return <LevelItem key={index} {...i} />
             })}
           </div>
         </div>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default LevelList;
+export default LevelList

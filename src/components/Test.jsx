@@ -14,6 +14,8 @@ const Test = ({ status = 'valid', text = '' }) => {
         return '✓'
       case 'invalid':
         return 'x'
+      default:
+
     }
   }
   return (

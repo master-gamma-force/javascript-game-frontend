@@ -1,6 +1,6 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import "./LevelItem.scss";
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import './LevelItem.scss'
 
 const LevelItem = ({
   id_category,
@@ -14,23 +14,23 @@ const LevelItem = ({
   testPath,
   nextLevelId,
 }) => {
-  let history = useHistory();
+  const history = useHistory()
   const classActive =
-    "LevelItem-Button " + (isActive ? "LevelItem-Button_isActive" : "");
+    `LevelItem-Button ${isActive ? 'LevelItem-Button_isActive' : ''}`
   const classWinner =
-    "LevelItem-Image " +
-    (isWinner
-      ? "LevelItem-Image_IsWinner"
-      : !isActive
-      ? "LevelItem-Image_IsNotWinner"
-      : "");
+    `LevelItem-Image ${
+      isWinner ?
+        'LevelItem-Image_IsWinner' :
+        !isActive ?
+          'LevelItem-Image_IsNotWinner' :
+          ''}`
 
   const handleClick = () => {
     if (isActive) {
-      activeteWinner();
-      activeNextLevel();
+      activeteWinner()
+      activeNextLevel()
       history.push({
-        pathname: "/filter",
+        pathname: '/filter',
         state: {
           id_category,
           id,
@@ -43,45 +43,45 @@ const LevelItem = ({
           testPath,
           nextLevelId,
         },
-      });
+      })
     }
-  };
+  }
 
   const activeteWinner = () => {
-    let data = JSON.parse(localStorage.getItem("levelData"));
-    for (var i = data.length - 1; i >= 0; i--) {
-      if (data[i].id == id_category) {
+    const data = JSON.parse(localStorage.getItem('levelData'))
+    for (let i = data.length - 1; i >= 0; i--) {
+      if (data[i].id === id_category) {
         for (let j = 0; j < data[i].levels.length; j++) {
-          if (data[i].levels[j].id == id) {
-            data[i].levels[j].isWinner = true;
+          if (data[i].levels[j].id === id) {
+            data[i].levels[j].isWinner = true
           }
         }
       }
     }
-    localStorage.setItem("levelData", JSON.stringify(data));
-  };
+    localStorage.setItem('levelData', JSON.stringify(data))
+  }
 
   const activeNextLevel = () => {
-    let data = JSON.parse(localStorage.getItem("levelData"));
-    for (var i = data.length - 1; i >= 0; i--) {
-      if (data[i].id == id_category) {
+    const data = JSON.parse(localStorage.getItem('levelData'))
+    for (let i = data.length - 1; i >= 0; i--) {
+      if (data[i].id === id_category) {
         for (let j = 0; j < data[i].levels.length; j++) {
-          const level = levelNumber + 1;
+          const level = levelNumber + 1
           if (level === data[i].levels[j].levelNumber) {
-            data[i].levels[j].isActive = true;
+            data[i].levels[j].isActive = true
           }
         }
       }
     }
-    localStorage.setItem("levelData", JSON.stringify(data));
-  };
+    localStorage.setItem('levelData', JSON.stringify(data))
+  }
 
   return (
     <div className={classActive} onClick={handleClick}>
       <span>{levelNumber}</span>
-      <div className={classWinner}></div>
+      <div className={classWinner} />
     </div>
-  );
-};
+  )
+}
 
-export default LevelItem;
+export default LevelItem
