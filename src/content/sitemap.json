@@ -12,6 +12,7 @@
         "contentPath": "src/content/arrays/filter/content.md",
         "challengePath": "src/content/arrays/filter/challenge.md",
         "testPath": "src/content/arrays/filter/test.js",
+        "prevLevelId": null,
         "nextLevelId": 2
       },
       {
@@ -23,6 +24,7 @@
         "contentPath": "src/content/arrays/map/content.md",
         "challengePath": "src/content/arrays/map/challenge.md",
         "testPath": "src/content/arrays/map/test.js",
+        "prevLevelId": 1,
         "nextLevelId": 3
       },
       {
@@ -34,6 +36,7 @@
         "contentPath": "src/content/arrays/reduce/content.md",
         "challengePath": "src/content/arrays/reduce/challenge.md",
         "testPath": "src/content/arrays/reduce/test.js",
+        "prevLevelId": 2,
         "nextLevelId": null
       }
     ]
