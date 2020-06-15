@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Challenge from './pages/Challenge'
-import FilterInstructions from './pages/FilterInstructions'
 import Instructions from './pages/Instruction'
 
 import './App.scss'
@@ -14,9 +13,6 @@ export default function App() {
       <div className="header" />
       <div className="container-data">
         <Switch>
-          <Route path="/filter">
-            <FilterInstructions />
-          </Route>
           <Route path="/:moduleId/:levelId/instructions">
             <Instructions />
           </Route>

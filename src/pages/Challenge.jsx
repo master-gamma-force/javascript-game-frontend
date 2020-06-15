@@ -1,11 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 
 // Components
 import './Challenge.scss'
 import CodeEditor from '../components/CodeEditor'
 import Markdown from '../components/Markdown'
 import Test from '../components/Test'
+import Button from '../components/Button'
 
 // data
 import sitemap from '../content/sitemap.json'
@@ -17,24 +18,31 @@ import CoreWorker from '../core/workers/worker'
 import useDynamicTestsImport from '../hooks/useDynamicTestsImport'
 import useDynamicMarkdownImport from '../hooks/useDynamicMarkdownImport'
 
-const handleResponseTest = (event) => {
-  console.log('Logs:')
-  console.log(event.data.logs)
-  console.log('Errors:')
-  console.log(event.data.errors)
+const handleResponseTest = (event, { history, moduleObj, level }) => {
+  console.log('Logs:', event.data.logs)
+  console.log('Errors:', event.data.errors)
+  history.push({
+    pathname: level.nextLevelId ?
+      `/${moduleObj.id}/${level.nextLevelId}/instructions` :
+      '/',
+    state: {},
+  })
 }
 
-const handleRunTests = (e, { code, tests }) => {
+const handleRunTests = (_, { code, tests, history, moduleObj, level }) => {
+
   const worker = new CoreWorker()
   const data = { code, tests }
   worker.addEventListener('message', (event) => {
-    handleResponseTest(event)
+    handleResponseTest(event, { history, moduleObj, level })
     worker.terminate()
   }, false)
   worker.postMessage(data)
+
 }
 
 const Challenge = () => {
+  const history = useHistory()
 
   const { moduleId, levelId } = useParams()
   const moduleObj = sitemap
@@ -66,13 +74,18 @@ const Challenge = () => {
           </div>
           <CodeEditor code={code} setCode={setCode} />
           <div className="Editor-footer">
-            <button
-              type="button"
-              className="Editor-button"
-              onClick={(e) => { handleRunTests(e, { code, tests }) }}
+            <Button
+              to={`/${moduleObj.id}/${level.id}/instructions`}
+              small
+            >
+              {'<-'}
+            </Button>
+
+            <Button
+              onClick={(event) => { handleRunTests(event, { code, tests, history, moduleObj, level }) }}
             >
               Correr Pruebas
-            </button>
+            </Button>
           </div>
         </div>
       </div>

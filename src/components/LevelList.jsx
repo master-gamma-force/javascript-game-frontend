@@ -17,13 +17,18 @@ const LevelList = () => {
   initialData()
   return (
     <>
-      {sitemap.map((item) => (
-        <div key={item.name}>
-          <h1 className="LevelList-Title">{item.name}</h1>
+      {sitemap.map((modules) => (
+        <div key={modules.name}>
+          <h1 className="LevelList-Title">{modules.name}</h1>
           <div className="LevelList-Body">
-            {item.levels.map((i, index) => {
-              i.id_category = item.id
-              return <LevelItem key={index} {...i} />
+            {modules.levels.map((moduleObj) => {
+              return (
+                <LevelItem
+                  key={`module-${moduleObj.id}`}
+                  {...moduleObj}
+                  id_category={modules.id}
+                />
+              )
             })}
           </div>
         </div>

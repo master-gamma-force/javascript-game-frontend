@@ -30,7 +30,7 @@ const LevelItem = ({
       activeteWinner()
       activeNextLevel()
       history.push({
-        pathname: '/filter',
+        pathname: `/${id_category}/${id}/instructions`,
         state: {
           id_category,
           id,
@@ -47,7 +47,7 @@ const LevelItem = ({
     }
   }
 
-  const activeteWinner = () => {
+  function activeteWinner() {
     const data = JSON.parse(localStorage.getItem('levelData'))
     for (let i = data.length - 1; i >= 0; i--) {
       if (data[i].id === id_category) {
@@ -61,7 +61,7 @@ const LevelItem = ({
     localStorage.setItem('levelData', JSON.stringify(data))
   }
 
-  const activeNextLevel = () => {
+  function activeNextLevel() {
     const data = JSON.parse(localStorage.getItem('levelData'))
     for (let i = data.length - 1; i >= 0; i--) {
       if (data[i].id === id_category) {
@@ -77,7 +77,12 @@ const LevelItem = ({
   }
 
   return (
-    <div className={classActive} onClick={handleClick}>
+    <div
+      role="button"
+      tabIndex={0}
+      className={classActive}
+      onClick={handleClick}
+    >
       <span>{levelNumber}</span>
       <div className={classWinner} />
     </div>
