@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useParams } from 'react-router-dom'
 
 // Components
 import './Challenge.scss'
@@ -6,15 +7,15 @@ import CodeEditor from '../components/CodeEditor'
 import Markdown from '../components/Markdown'
 import Test from '../components/Test'
 
-// Content
-import instructionsFile from '../mocks/filterInstructions.md'
-import {
-  TEMPLATE,
-  TEST,
-} from '../core/templates/filter'
+// data
+import sitemap from '../content/sitemap.json'
 
 //core
 import CoreWorker from '../core/workers/worker'
+
+// hooks
+import useDynamicTestsImport from '../hooks/useDynamicTestsImport'
+import useDynamicMarkdownImport from '../hooks/useDynamicMarkdownImport'
 
 const handleResponseTest = (event) => {
   console.log('Logs:')
@@ -34,15 +35,18 @@ const handleRunTests = (e, { code, tests }) => {
 }
 
 const Challenge = () => {
-  const [instructions, setInstructions] = useState('')
-  const [code, setCode] = useState(TEMPLATE)
-  useEffect(() => {
-    fetch(instructionsFile)
-      .then((response) => response.text())
-      .then((t) => {
-        setInstructions(t)
-      })
-  }, [])
+
+  const { moduleId, levelId } = useParams()
+  const moduleObj = sitemap
+    .filter((module) => module.id === moduleId)
+    .reduce((module) => module)
+  const level = moduleObj.levels
+    .filter((level) => level.id === parseInt(levelId, 10))
+    .reduce((level) => level)
+  const { testPath, challengePath } = level
+
+  const [instructions] = useDynamicMarkdownImport(challengePath)
+  const { code, setCode, tests } = useDynamicTestsImport(testPath)
 
   return (
     <div className="Challenge">
@@ -65,7 +69,7 @@ const Challenge = () => {
             <button
               type="button"
               className="Editor-button"
-              onClick={(e) => { handleRunTests(e, { code, tests: TEST }) }}
+              onClick={(e) => { handleRunTests(e, { code, tests }) }}
             >
               Correr Pruebas
             </button>
