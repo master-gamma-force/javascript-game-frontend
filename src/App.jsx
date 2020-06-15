@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Level from './pages/Level'
+import Challenge from './pages/Challenge'
 import FilterInstructions from './pages/FilterInstructions'
 import Instructions from './pages/Instruction'
 
@@ -21,10 +21,10 @@ export default function App() {
             <Instructions />
           </Route>
           <Route path="/:moduleId/:levelId/challenge">
-            <Instructions />
+            <Challenge />
           </Route>
           <Route path="/editor">
-            <Level />
+            <Challenge />
           </Route>
           <Route path="/">
             <LevelSelector />

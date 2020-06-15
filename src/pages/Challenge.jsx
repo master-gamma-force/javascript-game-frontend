@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 // Components
-import './Level.scss'
+import './Challenge.scss'
 import CodeEditor from '../components/CodeEditor'
 import Markdown from '../components/Markdown'
 import Test from '../components/Test'
@@ -16,7 +16,7 @@ import {
 //core
 import CoreWorker from '../core/workers/worker'
 
-const handleResponseTest =  (event) => {
+const handleResponseTest = (event) => {
   console.log('Logs:')
   console.log(event.data.logs)
   console.log('Errors:')
@@ -33,7 +33,7 @@ const handleRunTests = (e, { code, tests }) => {
   worker.postMessage(data)
 }
 
-const Level = () => {
+const Challenge = () => {
   const [instructions, setInstructions] = useState('')
   const [code, setCode] = useState(TEMPLATE)
   useEffect(() => {
@@ -45,16 +45,16 @@ const Level = () => {
   }, [])
 
   return (
-    <div className="Level">
-      <div className="Level-Instructions">
+    <div className="Challenge">
+      <div className="Challenge-Instructions">
         <Markdown text={instructions} />
       </div>
-      <div className="Level-Tests">
+      <div className="Challenge-Tests">
         <Test status="valid" text="Respuesta válida" />
         <Test status="invalid" text="Respuesta inválida" />
         <Test status="to-do" text="Por definir" />
       </div>
-      <div className="Level-Editor">
+      <div className="Challenge-Editor">
         <div className="Editor">
           <div className="Editor-header">
             {'</> '}
@@ -72,9 +72,9 @@ const Level = () => {
           </div>
         </div>
       </div>
-      <div className="Level-Footer" />
+      <div className="Challenge-Footer" />
     </div>
   )
 }
 
-export default Level
+export default Challenge
