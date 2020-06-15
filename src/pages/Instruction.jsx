@@ -6,10 +6,10 @@ import useDynamicMarkdownImport from '../hooks/useDynamicMarkdownImport'
 
 const Instruction = () => {
   const { moduleId, levelId } = useParams()
-  const module = sitemap
+  const moduleObj = sitemap
     .filter((module) => module.id === moduleId)
     .reduce((module) => module)
-  const level = module.levels
+  const level = moduleObj.levels
     .filter((level) => level.id === parseInt(levelId, 10))
     .reduce((level) => level)
   const { contentPath } = level
