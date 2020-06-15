@@ -1,6 +1,6 @@
 Hola soy Oscar y tengo otro problema en el que puedes ayudarme, ahora ya conozco los empleados que saben Python, pero se acerca fin de año y quiero premiar a los que llevan más tiempo conmigo, tengo el tiempo en meses, pero quisiera verlo en años.
 
-Hola soy Pepe vengo a enseñarte _.map()_ un método que todo array tiene, te servira para ayudar a Oscar, primero te lo explico sencillo, despues vamos a lo técnico y el código.
+Hola soy Pepe vengo a enseñarte `.map()` un método que todo array tiene, te servira para ayudar a Oscar, primero te lo explico sencillo, despues vamos a lo técnico y el código.
 
 ```js
 
