@@ -6,7 +6,7 @@ Hola soy Oscar y tengo otro problema en el que puedes ayudarme, ahora ya conozco
 
 Hola soy Pepe vengo a enseñarte *.map()* un metodo de los arrays que te servira para ayudar a Oscar, primero te lo explico sencillo, despues vamos a lo técnico y el código.
 
-```js
+```javascript
 
 let alimentos = [🥔, 🌽, 🧀];
 
