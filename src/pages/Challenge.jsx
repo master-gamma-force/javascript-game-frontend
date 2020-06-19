@@ -1,5 +1,5 @@
-import React from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 // Components
 import './Challenge.scss'
@@ -18,32 +18,28 @@ import CoreWorker from '../core/workers/worker'
 import useDynamicTestsImport from '../hooks/useDynamicTestsImport'
 import useDynamicMarkdownImport from '../hooks/useDynamicMarkdownImport'
 
-const handleResponseTest = (event, { history, moduleObj, level }) => {
-  console.log('Logs:', event.data.logs)
-  console.log('Errors:', event.data.errors)
-  history.push({
-    pathname: level.nextLevelId ?
-      `/${moduleObj.id}/${level.nextLevelId}/instructions` :
-      '/',
-    state: {},
-  })
+const handleResponseTest = (event, { tests, setTests, setAllowNext }) => {
+  const passed = event.data.logs.map((log) => log.test)
+
+  setTests(tests.map((test) => {
+    test.status = passed.includes(test.description) ? 'valid' : 'invalid'
+    return test
+  }))
+  const allowNext = tests.reduce((pass, test) => pass && test.status === 'valid', true)
+  setAllowNext(allowNext)
 }
 
-const handleRunTests = (_, { code, tests, history, moduleObj, level }) => {
-
+const handleRunTests = (_, { code, tests, setTests, setAllowNext }) => {
   const worker = new CoreWorker()
   const data = { code, tests }
   worker.addEventListener('message', (event) => {
-    handleResponseTest(event, { history, moduleObj, level })
+    handleResponseTest(event, { tests, setTests, setAllowNext })
     worker.terminate()
   }, false)
   worker.postMessage(data)
-
 }
 
 const Challenge = () => {
-  const history = useHistory()
-
   const { moduleId, levelId } = useParams()
   const moduleObj = sitemap
     .filter((module) => module.id === moduleId)
@@ -54,7 +50,8 @@ const Challenge = () => {
   const { testPath, challengePath } = level
 
   const [instructions] = useDynamicMarkdownImport(challengePath)
-  const { code, setCode, tests } = useDynamicTestsImport(testPath)
+  const { code, setCode, tests, setTests } = useDynamicTestsImport(testPath)
+  const { allowNext, setAllowNext } = useState(false)
 
   return (
     <div className="Challenge">
@@ -62,9 +59,9 @@ const Challenge = () => {
         <Markdown text={instructions} />
       </div>
       <div className="Challenge-Tests">
-        <Test status="valid" text="Respuesta válida" />
-        <Test status="invalid" text="Respuesta inválida" />
-        <Test status="to-do" text="Por definir" />
+        {
+          tests.map((test) => <Test status={test.status} text={test.description} />)
+        }
       </div>
       <div className="Challenge-Editor">
         <div className="Editor">
@@ -82,9 +79,15 @@ const Challenge = () => {
             </Button>
 
             <Button
-              onClick={(event) => { handleRunTests(event, { code, tests, history, moduleObj, level }) }}
+              onClick={(event) => { handleRunTests(event, { code, tests, setTests, setAllowNext }) }}
             >
               Correr Pruebas
+            </Button>
+            <Button
+              to={`/${moduleObj.id}/${level.nextLevelId}/instructions`}
+              disabled={allowNext}
+            >
+              {'->'}
             </Button>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const useDynamicTestsImport = (path) => {
-  const [tests, setTests] = useState('')
+  const [tests, setTests] = useState([])
   const [code, setCode] = useState('')
 
   useEffect(() => {
@@ -12,6 +12,7 @@ const useDynamicTestsImport = (path) => {
     }
     fetchData()
   }, [])
+
   return {tests,code,setCode,setTests}
 }
 

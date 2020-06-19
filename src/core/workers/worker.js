@@ -26,7 +26,7 @@ self.addEventListener('message', (e) => {
     step = 'run test'
     tm.run()
   } catch (err) {
-    tm.log.newErr({
+    tm.log.newProcessLog({
       step,
       pass: false,
       err,
@@ -36,5 +36,6 @@ self.addEventListener('message', (e) => {
   self.postMessage({
     logs: tm.log.logs,
     errors: tm.log.errors,
+    process: tm.log.processLog,
   })
 }, false)
