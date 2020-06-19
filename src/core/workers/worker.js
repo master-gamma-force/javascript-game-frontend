@@ -3,6 +3,7 @@
 
 import TestManager from '../TestManager/TestManager'
 
+// eslint-disable-next-line
 self.addEventListener('message', (e) => {
   const tm = new TestManager(e.data.tests)
 
@@ -31,7 +32,7 @@ self.addEventListener('message', (e) => {
       err,
     })
   }
-
+  // eslint-disable-next-line
   self.postMessage({
     logs: tm.log.logs,
     errors: tm.log.errors,

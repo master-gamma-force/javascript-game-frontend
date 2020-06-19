@@ -1,4 +1,4 @@
-.Level {
+.Challenge {
   display: grid;
   width: 100%;
   height: calc(100vh - 50px);
@@ -8,7 +8,7 @@
                         "tests  editor";
 }
 
-.Level-Instructions {
+.Challenge-Instructions {
   grid-area: instructions;
   background-color: white;
   padding: 30px;
@@ -16,7 +16,7 @@
   overflow-x: auto; 
 }
 
-.Level-Editor {
+.Challenge-Editor {
   grid-area: editor;
   background-color:#3A404B;
 
@@ -24,7 +24,7 @@
 }
 
 
-.Level-Tests {
+.Challenge-Tests {
   grid-area: tests;
   background-color: var(--color-primary-dark);
 }
@@ -50,7 +50,6 @@
     height: 100%;
     background: var(--color-primary-darker);
     display: flex;
-    // flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
   }

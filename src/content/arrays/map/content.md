@@ -1,8 +1,7 @@
 Hola soy Oscar y tengo otro problema en el que puedes ayudarme, ahora ya conozco los empleados que saben Python, pero se acerca fin de año y quiero premiar a los que llevan más tiempo conmigo, tengo el tiempo en meses, pero quisiera verlo en años.
 
 Hola soy Pepe vengo a enseñarte _.map()_ un método que todo array tiene, te servira para ayudar a Oscar, primero te lo explico sencillo, despues vamos a lo técnico y el código.
-
-```js
+```javascript
 
 let alimentos = [🥔, 🌽, 🧀];
 
@@ -22,7 +21,7 @@ En la base de datos de la zapatería las tallas vienen en medida de E.U. y las q
 
 ### Paso 1: tener nuestros zapatos en objetos.
 
-```js
+```javascript
 let zapato1 = {
   talla: 6,
   marca: 'adidas'
@@ -43,13 +42,13 @@ let zapato4 = {
 
 ### Paso 2: Creamos un array que contenga a todos los zapatos.
 
-```js
+```javascript
 const zapatos = [zapato1, zapato2, zapato3, zapato4];
 ```
 
 ### Paso 3 Creamos la función
 
-```js
+```javascript
 const cambiarTalla = (zapato) => {
   return zapato.talla - 2;
 };
@@ -57,13 +56,13 @@ const cambiarTalla = (zapato) => {
 
 ### Paso 4: Aplicar el método .map() y mostrarlo con un console.log()
 
-```js
+```javascript
 const tallasMx = zapatos.filter(cambiarTalla);
 console.log(tallasMx);
 ```
 
 ### El resultado es:
 
-```js
+```javascript
 [4, 6, 3, 4];
 ```

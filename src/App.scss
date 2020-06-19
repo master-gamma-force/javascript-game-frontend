@@ -11,7 +11,7 @@
   --color-green: #bfdc36;
   --color-green-lighter: #a5fe85;
 
-  --color-yellow: #f1ca2f;
+  --color-yellow: #F1CA31;
   --color-beige: #ebe8d8;
 
   --color_dove_gray_approx: #666;
@@ -51,7 +51,22 @@
   counter-reset: line;
 }
 
+html {
+  font-family: var(--font-family-text);
+  color: #475161;
+  font-size: 16px;
+  font-weight: normal;
+}
 
+h1 {
+  font-size: 47px;
+  text-align: center;
+  padding-top: 2em;
+}
+
+h1, h2, h3, h4 {
+  display: block;
+}
 
 .header {
   background: url("assets/images/header.svg") no-repeat left center;

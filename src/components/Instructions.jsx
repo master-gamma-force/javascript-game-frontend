@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Markdown from './Markdown'
 import myMarkdownFile from '../mocks/hello.md'
-// import './CodeEditor.scss'
 import './Instructions.scss'
 
 const Instructions = () => {

@@ -6,7 +6,7 @@ No olvides los pasos:
 3. Aplica el método .filter()
 4. Haz un console.log con el resultado.
 
-```js
+```javascript
 let leonidas = {
   name: 'Leonidas',
   skill: 'JavaScript'

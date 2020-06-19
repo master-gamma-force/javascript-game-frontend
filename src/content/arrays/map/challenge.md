@@ -12,7 +12,7 @@ Paso 4: Aplica el método .map() al array y pasale la función que creaste.
 
 Paso 5: Imprime el resultado con un console.log().
 
-```js
+```javascript
 let leonidas = {
   name: 'Leonidas',
   timeOfWork: 48

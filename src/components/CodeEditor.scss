@@ -37,10 +37,8 @@
 	&__editor {
 		font-size: 12px;
 		font-variant-ligatures: common-ligatures;
-		// background-color: var(--alabaster);
 		border-radius: 3px;
 		textarea {
-			// outline: 0;
 			height: 100%!important;
 		}
 		&_area {
@@ -49,7 +47,6 @@
 			overflow: auto;
 			margin: 1.67em 0;
 			padding-left: 3em;
-		
 		}
 	}
 }
