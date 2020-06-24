@@ -51,7 +51,7 @@ const Challenge = () => {
 
   const [instructions] = useDynamicMarkdownImport(challengePath)
   const { code, setCode, tests, setTests } = useDynamicTestsImport(testPath)
-  const { allowNext, setAllowNext } = useState(false)
+  const [allowNext, setAllowNext] = useState(false)
 
   return (
     <div className="Challenge">
