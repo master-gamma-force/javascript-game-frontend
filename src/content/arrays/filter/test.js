@@ -18,7 +18,7 @@ const employees = [];
 const  knowPython = () => {
 }
 const sabePython = employees.method(function);
-console.log(sabePython);`;
+console.log(sabePython);`
 
 export const TEST = [
   {
@@ -30,12 +30,14 @@ export const TEST = [
         { name: 'Nicole', skill: 'Python' },
         { name: 'Richard', skill: 'Python' }
       ]
-    ]
+    ],
+    status: 'to-do',
   },
   {
     description: 'Test length of employees know Python',
     type: 'equal',
     value: 'sabePython.length',
-    params: [2]
+    params: [2],
+    status: 'to-do',
   }
-];
+]

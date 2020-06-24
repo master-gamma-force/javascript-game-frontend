@@ -25,6 +25,7 @@ export const TEST = [
     description: 'Test total salary',
     type: 'equal',
     value: 'total',
-    params: [13400]
+    params: [13400],
+    status: 'to-do',
   }
 ];
