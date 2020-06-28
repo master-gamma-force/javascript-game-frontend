@@ -7,13 +7,6 @@ import 'prismjs/components/prism-markup'
 
 import './CodeEditor.scss'
 
-// const code = `
-// function helloWorld() {
-//   console.log('Hello World')
-// }
-// helloWorld()
-// `
-
 const CodeEditor = ({ code, setCode }) => {
   return (
     <SimpleEditor

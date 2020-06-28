@@ -25,6 +25,7 @@ export const TEST = [
     description: 'Test content time of work in years',
     type: 'deepEqual',
     value: 'timeInYears',
-    params: [[4, 3, 2, 1]]
+    params: [[4, 3, 2, 1]],
+    status: 'to-do',
   }
 ];

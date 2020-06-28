@@ -8,7 +8,7 @@ No olvides los pasos:
 4. Aplicar el método .reduce()
 5. Mostrar el resultado con un console.
 
-```js
+```javascript
 let leonidas = {
   name: 'Leonidas',
   salary: 3400

@@ -4,6 +4,7 @@ export default class Logger {
   constructor() {
     this.log = new AbstractLogger()
     this.logErr = new AbstractLogger()
+    this.process = new AbstractLogger()
   }
 
   /**
@@ -23,6 +24,14 @@ export default class Logger {
   }
 
   /**
+   * Add a new error
+   * @param {Object} err err info
+   */
+  newProcessLog(log) {
+    this.process.add(log)
+  }
+
+  /**
    * @getter
    * @returns {Object[]} list of errors
    */
@@ -39,10 +48,19 @@ export default class Logger {
   }
 
   /**
+   * @getter
+   * @returns {object[]} list of logs process
+   */
+  get processLog() {
+    return this.process.getAll()
+  }
+
+  /**
    * Clean the logger
    */
   clear() {
     this.log.clean()
     this.logErr.clean()
+    this.process.clean()
   }
 }
