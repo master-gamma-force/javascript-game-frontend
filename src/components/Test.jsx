@@ -1,10 +1,6 @@
 import React from 'react'
 import './Test.scss'
 
-// ToDo
-// valid
-// invalid
-
 const Test = ({ status = 'valid', text = '' }) => {
   const renderSwitch = (param) => {
     switch (param) {

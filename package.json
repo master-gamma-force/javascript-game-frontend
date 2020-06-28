@@ -6,10 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "ace-builds": "^1.4.11",
+    "brace": "^0.11.1",
     "chai": "^4.2.0",
     "node-sass": "^4.14.1",
     "prismjs": "^1.19.0",
     "react": "^16.13.1",
+    "react-ace": "^9.1.1",
     "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
     "react-dynamic-import": "^1.1.4",
@@ -24,7 +27,6 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "build:worker": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

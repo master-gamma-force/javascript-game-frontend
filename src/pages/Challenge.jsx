@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 // Components
 import './Challenge.scss'
-import CodeEditor from '../components/CodeEditor'
+import CodeEditor from '../components/AceEditor'
 import Markdown from '../components/Markdown'
 import Test from '../components/Test'
 import Button from '../components/Button'
