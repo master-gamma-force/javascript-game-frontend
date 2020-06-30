@@ -26,7 +26,6 @@ const handleResponseTest = (event, { tests, setTests, setAllowNext }) => {
     return test
   }))
   const allowNext = tests.reduce((pass, test) => pass && test.status === 'valid', true)
-  console.log(allowNext)
   setAllowNext(allowNext)
 }
 
