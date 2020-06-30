@@ -19,11 +19,19 @@
     text-decoration: none;
     text-transform: uppercase;
   }
+  & svg{
+    width: 15px;
+    stroke-width:4px;
+    fill: var(--color-secondary);
+  }
   &:hover {
     background-color: var(--color-secondary);
     color: white;
     & a{
       color: white;
+    }
+    & svg{
+      fill: white;
     }
   }
 }
