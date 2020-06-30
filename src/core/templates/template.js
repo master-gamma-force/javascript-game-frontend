@@ -7,5 +7,6 @@ export const TEST = [
     type: '',
     value: '',
     params: [],
+    status: 'to-do',
   },
 ]
