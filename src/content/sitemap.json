@@ -4,6 +4,18 @@
     "name": "Array",
     "levels": [
       {
+        "id": 4,
+        "isActive": false,
+        "isWinner": false,
+        "levelNumber": 4,
+        "title": "Flat",
+        "contentPath": "src/content/arrays/flat/content.md",
+        "challengePath": "src/content/arrays/flat/challenge.md",
+        "testPath": "src/content/arrays/flat/test.js",
+        "prevLevelId": 3,
+        "nextLevelId": null
+      },
+      {
         "id": 1,
         "isActive": true,
         "isWinner": false,
@@ -37,6 +49,18 @@
         "challengePath": "src/content/arrays/reduce/challenge.md",
         "testPath": "src/content/arrays/reduce/test.js",
         "prevLevelId": 2,
+        "nextLevelId": 4
+      },
+      {
+        "id": 4,
+        "isActive": false,
+        "isWinner": false,
+        "levelNumber": 4,
+        "title": "Flat",
+        "contentPath": "src/content/arrays/flat/content.md",
+        "challengePath": "src/content/arrays/flat/challenge.md",
+        "testPath": "src/content/arrays/flat/test.js",
+        "prevLevelId": 3,
         "nextLevelId": null
       }
     ]
