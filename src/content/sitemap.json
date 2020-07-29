@@ -50,6 +50,18 @@
         "testPath": "src/content/arrays/flat/test.js",
         "prevLevelId": 3,
         "nextLevelId": null
+      },
+      {
+        "id": 5,
+        "isActive": false,
+        "isWinner": false,
+        "levelNumber": 5,
+        "title": "Some",
+        "contentPath": "src/content/arrays/some/content.md",
+        "challengePath": "src/content/arrays/some/challenge.md",
+        "testPath": "src/content/arrays/some/test.js",
+        "prevLevelId": 4,
+        "nextLevelId": null
       }
     ]
   }
