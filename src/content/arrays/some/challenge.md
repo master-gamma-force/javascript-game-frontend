@@ -1,4 +1,4 @@
-Ahora ya puedes aplicar el método `.some()` para ayudar a Oscar a validar al menos un empleado tiene 5 cursos aprovados.
+Ahora ya puedes aplicar el método `.some()` para ayudar a Oscar a validar al menos un empleado tiene 5 cursos aprobados.
 No olvides los pasos:
 
 1. Crea un arreglo que contenga todos los empleados.
