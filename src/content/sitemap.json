@@ -49,6 +49,30 @@
         "challengePath": "src/content/arrays/flat/challenge.md",
         "testPath": "src/content/arrays/flat/test.js",
         "prevLevelId": 3,
+        "nextLevelId": 5
+      },
+      {
+        "id": 6,
+        "isActive": false,
+        "isWinner": false,
+        "levelNumber": 6,
+        "title": "Find",
+        "contentPath": "src/content/find/flat/content.md",
+        "challengePath": "src/content/find/flat/challenge.md",
+        "testPath": "src/content/find/flat/test.js",
+        "prevLevelId": 5,
+        "nextLevelId": 7
+      },
+      {
+        "id": 7,
+        "isActive": false,
+        "isWinner": false,
+        "levelNumber": 7,
+        "title": "Includes",
+        "contentPath": "src/content/includes/flat/content.md",
+        "challengePath": "src/content/includes/flat/challenge.md",
+        "testPath": "src/content/includes/flat/test.js",
+        "prevLevelId": 6,
         "nextLevelId": null
       }
     ]
