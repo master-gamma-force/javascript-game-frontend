@@ -49,7 +49,7 @@
         "challengePath": "src/content/arrays/flat/challenge.md",
         "testPath": "src/content/arrays/flat/test.js",
         "prevLevelId": 3,
-        "nextLevelId": null
+        "nextLevelId": 5
       },
       {
         "id": 5,
