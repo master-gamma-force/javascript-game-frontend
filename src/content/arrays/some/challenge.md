@@ -9,18 +9,18 @@ No olvides los pasos:
 ```javascript
 let leonidas = {
   name: 'Leonidas',
-  cursosAprovados: 2
+  cursosAprobados: 2
 };
 let nicole = {
   name: 'Nicole',
-  cursosAprovados: 5
+  cursosAprobados: 5
 };
 let richard = {
   name: 'Richard',
-  cursosAprovados: 5
+  cursosAprobados: 5
 };
 let angela = {
   name: 'Angela',
-  cursosAprovados: 1
+  cursosAprobados: 1
 };
 ```
